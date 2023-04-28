@@ -1,5 +1,3 @@
-variable "AWS_ACCESS_KEY_ID" {}
-variable "AWS_SECRET_ACCESS_KEY" {}
 variable "environment" {
   type        = string
   description = "(Required) name of environemnt which this cluster is in"
