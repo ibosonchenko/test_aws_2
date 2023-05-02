@@ -1,6 +1,6 @@
 environment      = "dev"
 region           = "eu-west-1"
-zone_name        = "aws.big.kr.ua"
+zone_name        = "domain"
 ecs_fargate_name = "ecs-cluster-task"
 
 
