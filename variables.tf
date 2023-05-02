@@ -13,9 +13,9 @@ variable "zone_name" {
   description = "Hosted zone name in Route53, like as dev.trainsmart.com, prod.trainsmart.com"
 }
 
-variable "ecs_fargate_name" {
+variable "ecs_cluster_name" {
   type        = string
-  description = "ECS Fargate record name in Route53"
+  description = "ECS cluster record name in Route53"
 }
 
 #--------------------------------------

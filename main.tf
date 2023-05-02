@@ -4,7 +4,7 @@ module "network" {
   environment      = var.environment
   region           = var.region
   zone_name        = var.zone_name
-  ecs_fargate_name = var.ecs_fargate_name
+  ecs_cluster_name = var.ecs_cluster_name
 
   vpc_name                      = local.vpc_name
   vpc_cidr_block                = local.vpc_cidr_block
@@ -14,7 +14,7 @@ module "network" {
   database_subnet_cidrs         = local.database_subnet_cidrs
   private_subnet_allowed_cidrs  = local.private_subnet_allowed_cidrs
   database_subnet_allowed_cidrs = local.database_subnet_allowed_cidrs
-  number_of_nat_gateways        = local.number_of_nat_gateways
+#  number_of_nat_gateways        = local.number_of_nat_gateways
   cluster_name                  = local.cluster_name
 }
 

@@ -81,7 +81,7 @@ TASK_DEFINITION
     #cpu_architecture        = "ARM64"    
   }
 
-#  lifecycle {
-#    ignore_changes = all  
-#  }
+  lifecycle {
+    ignore_changes = all  
+  }
 }

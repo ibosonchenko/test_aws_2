@@ -2,6 +2,9 @@
 # Local .terraform directories
 **/.terraform/*
 
+# .terraform lock files
+.terraform.lock.hcl
+
 # .tfstate files
 *.tfstate
 *.tfstate.*
@@ -42,3 +45,4 @@ terraform.rc
 
 # # worksapce file for Terraform
 workspace.tf
+

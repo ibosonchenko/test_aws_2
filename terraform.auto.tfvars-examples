@@ -1,0 +1,61 @@
+environment      = "dev"
+region           = "eu-west-1"
+zone_name        = "aws.big.kr.ua"
+ecs_fargate_name = "ecs-cluster-task"
+
+
+#--------------------------------------
+# Capacity Providers
+#--------------------------------------
+#  The number of spot instances to have as minimum
+spot_base = 1
+# The number of spot tasks to have over base as a ratio against on demand tasks
+spot_weight = 1
+# The number of on demand tasks to have as minimum
+ondemand_base = 1
+# The number of on demand tasks to have over base as a ratio against spot tasks
+ondemand_weight = 1
+
+# #--------------------------------------
+# # RDS
+# #--------------------------------------
+# create         = true
+# identifier     = "trainsmart-db"
+# engine         = "postgres"
+# engine_version = "14.4"
+# instance_class = "db.t4g.small"
+# timezone       = "UTC"
+# license_model  = "general-public-license"
+# db_name        = "trainsmart-db"
+# username       = "trainsmart-db"
+# password       = local.password
+# #create_random_password = true 
+# port           = 5432
+# multi_az       = false
+# # db_subnet_group_name   = module.network.database
+# # vpc_security_group_ids = [module.network.security_group_id]
+# allocated_storage      = 20
+# max_allocated_storage  = 100
+# maintenance_window     = "Sun:00:00-Sun:03:00"
+# backup_window          = "03:00-06:00"
+
+# #--------------------------------------
+# # ECS
+# #--------------------------------------
+# cluster_name    = "ecs-dev"
+# secret_name     = "ecs-secret-dev"
+
+# #--------------------------------------
+# #S3
+# #--------------------------------------
+# bucket_name_client_app = "client.ecs.dev.trainsmart.com"
+# bucket_name_coach_app  = "coach.ecs.dev.trainsmart.com"
+# bucket_name_cloudfront = "cloudfront.trainsmart.dev"
+
+# #--------------------------------------
+# #Cloudfront
+# #--------------------------------------
+# bucket_name_client_app = "client.ecs.dev.trainsmart.com"
+# bucket_name_coach_app  = "coach.ecs.dev.trainsmart.com"
+# organisation_zone      = "dev.trainsmart.com"
+

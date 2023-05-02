@@ -48,19 +48,19 @@ variable "database_subnet_allowed_cidrs" {
    description = "list of allowed CIDR's for database subnets"
 }
 
-variable "number_of_nat_gateways" {
-  type        = number
-  description = "typically 1"
-}
+# variable "number_of_nat_gateways" {
+#   type        = number
+#   description = "typically 1"
+# }
 
 variable "zone_name" {
    type        = string
    description = "Hosted zone name in Route53"     
 }
  
-variable "ecs_fargate_name" {
+variable "ecs_cluster_name" {
    type        = string
-   description = "ECS Fargate record name in Route53"  
+   description = "ECS cluster record name in Route53"  
 }
 
 variable "cluster_name" {

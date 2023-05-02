@@ -28,7 +28,7 @@ resource "aws_ecs_service" "ecs_fargate" {
 #    capacity_provider = "FARGATE"
 #    base              = var.ondemand_base
 #    weight            = var.ondemand_weight
-#}
+# }
  
  ## need to hardcode loadbalancers until new loadbalancer attachment is available
  ## https://github.com/hashicorp/terraform-provider-aws/issues/23838
@@ -48,9 +48,10 @@ resource "aws_ecs_service" "ecs_fargate" {
 #      container_port   = 81
 #   }
  
-# lifecycle {
-#    ignore_changes = [task_definition,launch_type]
- #}
+ lifecycle {
+   ignore_changes = [task_definition,launch_type]
+ }
+ 
   depends_on = [
     aws_ecs_task_definition.ecs_fargate
   ]  

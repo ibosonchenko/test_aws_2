@@ -2,9 +2,9 @@ data "aws_route53_zone" "hosted_zone" {
   name = var.zone_name
 }
 
-resource "aws_route53_record" "ecs_fargate_name" {
+resource "aws_route53_record" "ecs_cluster_name" {
   allow_overwrite = true
-  name            = var.ecs_fargate_name
+  name            = var.ecs_cluster_name
   type            = "CNAME"
   ttl             = 300
   zone_id         = data.aws_route53_zone.hosted_zone.zone_id

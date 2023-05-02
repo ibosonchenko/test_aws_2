@@ -9,12 +9,16 @@ resource "aws_ecs_cluster_capacity_providers" "ecs_fargate" {
 
   default_capacity_provider_strategy {
       capacity_provider = "FARGATE_SPOT"
-      weight            = 1
+      base              = var.spot_base
+      weight            = var.spot_weight      
+      #weight            = 1
   }
     
   default_capacity_provider_strategy {
       capacity_provider = "FARGATE"
-      base              = 1
-      weight            = 0
+      base              = var.ondemand_base
+      weight            = var.ondemand_weight      
+      #base              = 1
+      #weight            = 0
   }
 }
